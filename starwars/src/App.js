@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './App.css';
-
+import sWCharacter from './components/Character.js';
 
 const App = () => {
 
@@ -10,7 +10,7 @@ const App = () => {
 
   useEffect (() => {
     
-    const getAPI = () => {axios.get('(https://swapi.dev/')
+    const getAPI = () => {axios.get('https://swapi.dev/')
     .then( response => {
       console.log(response);
       getData(response['data']['results']);
@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">REACT WARS ></h1>
-
+{/* <sWCharacters></sWCharacters> */}
 
     </div>
   );
